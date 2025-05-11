@@ -79,6 +79,3 @@ for word, weight in list(suspicious_words.items())[-10:]:
     print(f"{word}: {round(weight, 3)}")
 
 print("\nModel, vectorizer, and suspicious keywords saved successfully.")
-tn, fp, fn, tp = confusion_matrix(y_test, y_pred).ravel()
-if fn > fp:
-    print("\n⚠️ Warning: Model is flagging too many real news as fake (high false negatives). Consider tuning or adding more real news data.")
